@@ -3,32 +3,39 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=0.86, maximum-scale=3.0, minimum-scale=0.86">
     <title>The Bana Fam Tree</title>
     <meta name="description" content="The family tree of Bana Banana line">
     <meta name="keywords" content="Banana, family tree">
     <link rel="stylesheet" href="https://use.typekit.net/fse2ehi.css">
     <link rel="stylesheet" href="/public/stylesheets/general.css">
+    <script type="text/javascript" src="public/pagemap.min.js"></script>
+    <script type="text/javascript" src="public/main.js"></script>
   </head>
   <body>
     <article>
+      <header>
+        <div class="header"><a href="/"><img src="/img/B.svg" alt="Bana b"></a>
+          <ul>
+            <li><a href="https://docs.google.com/forms/d/e/1FAIpQLScctmEn9NuVVt57wpz8IPzRK1cFBbkfYCQwrGVA4UT0B0CAKQ/viewform?usp=sf_link">Adopt a Bana</a></li>
+            <li><a href="https://docs.google.com/forms/d/e/1FAIpQLSe_qQ-gh0HWxjh1YAzw-91pLdRc39F9s0DlQrEb2Pmh-3BoVg/viewform?usp=sf_link">Update your Bana</a></li>
+            <li><a href="https://docs.google.com/forms/d/e/1FAIpQLSfJCQJxykUKyceq6uNajkchR-viHY3koxKVySbgF2k94F4t1A/viewform?usp=sf_link">Add a new born Bana</a></li>
+            <li><a href="https://docs.google.com/forms/d/e/1FAIpQLScJYs8wEBv5pS0Ssswm_TT8y1WyTp3QYMqDQeICTesBBNfQ-g/viewform?usp=sf_link">Put Bana up for adoption</a></li>
+          </ul>
+        </div>
+      </header>
+      <canvas id="map" class="minimap"></canvas>
       <div class="tree">
         <div class="tree__wrapper">
           <div class="tree__background">
-            <header>
-              <div class="header__icon">
-                <p>B</p>
-              </div>
-              <div class="header__intro">
-                <h1>The Bana Fam Tree</h1>
-                <p>These Bana's are the pride of the family.<strong> Scroll to see are latest members!</strong></p>
-                <p>If you want to update your Bana, let us know! -<a href="http://www.you-et.com">You-et</a>and<a href="http://www.jaspervanderwaa.com">Jasper</a></p>
-              </div>
-            </header>
+            <div class="intro">
+              <h1>The Bana Fam Tree</h1>
+              <p>These Bana's are the pride of the family.<strong> Scroll to see are latest members!</strong></p>
+            </div>
             <ul>
               <li class="leaf">
                 <div class="leaf__head">
-                  <div class="plant collapse plant--with-children false false"><img src="/img/tid/11.jpg" alt="name plant">
+                  <div class="plant collapse plant--with-children false false"><img src="/img/tid/11.jpg" alt="Mem banana plant">
                     <h2>Mem</h2>
                     <p>born: <i>unknown</i>; lives in Limburg.</p>
                   </div>
@@ -37,7 +44,7 @@
                   <ul class="leaf__children">
                     <li class="leaf">
                       <div class="leaf__head">
-                        <div class="plant collapse plant--with-children false plant--daughter"><img src="/img/tid/33.jpg" alt="name plant">
+                        <div class="plant collapse plant--with-children false plant--daughter"><img src="/img/tid/33.jpg" alt="Musa banana plant">
                           <h2>Musa</h2>
                           <p>born: <i>unknown</i>; lives in Zeist.</p>
                         </div>
@@ -46,7 +53,7 @@
                         <ul class="leaf__children">
                           <li class="leaf">
                             <div class="leaf__head">
-                              <div class="plant collapse plant--with-children false plant--daughter"><img src="/img/tid/22.jpg" alt="name plant">
+                              <div class="plant collapse plant--with-children false plant--daughter"><img src="/img/tid/22.jpg" alt="Cavendish banana plant">
                                 <h2>Cavendish</h2>
                                 <p>born: <i>unknown</i>; lives in Zeist.</p>
                               </div>
@@ -55,7 +62,7 @@
                               <ul class="leaf__children">
                                 <li class="leaf">
                                   <div class="leaf__head">
-                                    <div class="plant collapse plant--with-children false plant--daughter"><img src="/img/tid/81.jpg" alt="name plant">
+                                    <div class="plant collapse plant--with-children false plant--daughter"><img src="/img/tid/81.jpg" alt="Bente banana plant">
                                       <h2>Bente</h2>
                                       <p>born: nov 2017; lives in Overijssel.</p>
                                     </div>
@@ -64,7 +71,7 @@
                                     <ul class="leaf__children">
                                       <li class="leaf">
                                         <div class="leaf__head">
-                                          <div class="plant collapse false false plant--daughter"><img src="/img/tid/82.jpg" alt="name plant">
+                                          <div class="plant collapse false false plant--daughter"><img src="/img/tid/82.jpg" alt="false banana plant">
                                             <h2><i>unknown</i></h2>
                                             <p>born: <i>unknown</i>; lives in <i>unknown</i>; caregiver is Monique.</p>
                                           </div>
@@ -74,7 +81,7 @@
                                       </li>
                                       <li class="leaf">
                                         <div class="leaf__head">
-                                          <div class="plant collapse false false plant--daughter"><img src="/img/tid/83.jpg" alt="name plant">
+                                          <div class="plant collapse false false plant--daughter"><img src="/img/tid/83.jpg" alt="Lilly banana plant">
                                             <h2>Lilly</h2>
                                             <p>born: <i>unknown</i>; lives in Overijssel.</p>
                                           </div>
@@ -84,7 +91,7 @@
                                       </li>
                                       <li class="leaf">
                                         <div class="leaf__head">
-                                          <div class="plant collapse false false plant--daughter"><img src="/img/tid/84.jpg" alt="name plant">
+                                          <div class="plant collapse false false plant--daughter"><img src="/img/tid/84.jpg" alt="Klaas banana plant">
                                             <h2>Klaas</h2>
                                             <p>born: <i>unknown</i>; lives in Overijssel.</p>
                                           </div>
@@ -97,7 +104,7 @@
                                 </li>
                                 <li class="leaf">
                                   <div class="leaf__head">
-                                    <div class="plant collapse false false plant--daughter"><img src="/img/tid/71.jpg" alt="name plant">
+                                    <div class="plant collapse false false plant--daughter"><img src="/img/tid/71.jpg" alt="false banana plant">
                                       <h2><i>unknown</i></h2>
                                       <p>born: <i>unknown</i>; lives in Brabant.</p>
                                     </div>
@@ -110,7 +117,7 @@
                           </li>
                           <li class="leaf">
                             <div class="leaf__head">
-                              <div class="plant collapse plant--with-children false plant--daughter"><img src="/img/tid/41.jpg" alt="name plant">
+                              <div class="plant collapse plant--with-children false plant--daughter"><img src="/img/tid/41.jpg" alt="Spruitje banana plant">
                                 <h2>Spruitje</h2>
                                 <p>born: apr 2017; lives in Delft; caregiver is Emma.</p>
                               </div>
@@ -119,7 +126,7 @@
                               <ul class="leaf__children">
                                 <li class="leaf">
                                   <div class="leaf__head">
-                                    <div class="plant collapse false false plant--daughter"><img src="/img/tid/42.jpg" alt="name plant">
+                                    <div class="plant collapse false false plant--daughter"><img src="/img/tid/42.jpg" alt="Petronela banana plant">
                                       <h2>Petronela</h2>
                                       <p>born: <i>unknown</i>; lives in Delft; caregiver is Emma.</p>
                                     </div>
@@ -129,7 +136,7 @@
                                 </li>
                                 <li class="leaf">
                                   <div class="leaf__head">
-                                    <div class="plant collapse false false plant--daughter"><img src="/img/tid/43.jpg" alt="name plant">
+                                    <div class="plant collapse false false plant--daughter"><img src="/img/tid/43.jpg" alt="Thorsten banana plant">
                                       <h2>Thorsten</h2>
                                       <p>born: <i>unknown</i>; lives in Delft; caregiver is Emma.</p>
                                     </div>
@@ -139,7 +146,7 @@
                                 </li>
                                 <li class="leaf">
                                   <div class="leaf__head">
-                                    <div class="plant collapse false false plant--daughter"><img src="/img/tid/44.jpg" alt="name plant">
+                                    <div class="plant collapse false false plant--daughter"><img src="/img/tid/44.jpg" alt="Garibaldi banana plant">
                                       <h2>Garibaldi</h2>
                                       <p>born: <i>unknown</i>; lives in Delft; caregiver is Emma.</p>
                                     </div>
@@ -149,7 +156,7 @@
                                 </li>
                                 <li class="leaf">
                                   <div class="leaf__head">
-                                    <div class="plant collapse false false plant--daughter"><img src="/img/tid/45.jpg" alt="name plant">
+                                    <div class="plant collapse false false plant--daughter"><img src="/img/tid/45.jpg" alt="false banana plant">
                                       <h2><i>unknown</i></h2>
                                       <p>born: <i>unknown</i>; lives in Delft; caregiver is Emma.</p>
                                     </div>
@@ -162,7 +169,7 @@
                           </li>
                           <li class="leaf">
                             <div class="leaf__head">
-                              <div class="plant collapse false plant--with-child plant--daughter"><img src="/img/tid/60.jpg" alt="name plant">
+                              <div class="plant collapse false plant--with-child plant--daughter"><img src="/img/tid/60.jpg" alt="false banana plant">
                                 <h2><i>unknown</i></h2>
                                 <p>born: nov 2017; lives in Enschede.</p>
                               </div>
@@ -171,7 +178,7 @@
                               <ul class="leaf__child">
                                 <li class="leaf">
                                   <div class="leaf__head">
-                                    <div class="plant collapse false false plant--daughter"><img src="/img/tid/no-picture.jpg" alt="name plant">
+                                    <div class="plant collapse false false plant--daughter"><img src="/img/tid/no-picture.jpg" alt="The Six Siblings banana plant">
                                       <h2>The Six Siblings</h2>
                                       <p>born: <i>unknown</i>; lives in Enschede.</p>
                                     </div>
@@ -184,7 +191,7 @@
                           </li>
                           <li class="leaf">
                             <div class="leaf__head">
-                              <div class="plant collapse false false plant--daughter"><img src="/img/tid/59.jpg" alt="name plant">
+                              <div class="plant collapse false false plant--daughter"><img src="/img/tid/59.jpg" alt="false banana plant">
                                 <h2><i>unknown</i></h2>
                                 <p>born: jun 2018; lives in Utrecht.</p>
                               </div>
@@ -194,7 +201,7 @@
                           </li>
                           <li class="leaf">
                             <div class="leaf__head">
-                              <div class="plant collapse false false plant--daughter"><img src="/img/tid/no-picture.jpg" alt="name plant">
+                              <div class="plant collapse false false plant--daughter"><img src="/img/tid/no-picture.jpg" alt="false banana plant">
                                 <h2><i>unknown</i></h2>
                                 <p>born: <i>unknown</i>; lives in Hengelo.</p>
                               </div>
@@ -207,7 +214,7 @@
                     </li>
                     <li class="leaf">
                       <div class="leaf__head">
-                        <div class="plant collapse false false plant--daughter"><img src="/img/tid/no-picture.jpg" alt="name plant">
+                        <div class="plant collapse false false plant--daughter"><img src="/img/tid/no-picture.jpg" alt="false banana plant">
                           <h2><i>unknown</i></h2>
                           <p>born: <i>unknown</i>; lives in Utrecht.</p>
                         </div>
