@@ -87,4 +87,5 @@ docReady(function() {
       interval: null
   });
 
+  const tobi = new Tobi({docClose: false});
 });
