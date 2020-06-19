@@ -78,14 +78,57 @@ docReady(function() {
       viewport: null,
       styles: {
           // 'h1': `rgba(0,0,0,0.10)`,
-          '.plant': `rgba(199,212,116,0.5)`, // 199, 212, 116
-          '.intro': `rgba(92,148,187,0.2)` // 199, 212, 116
+          '.selected .plant': 'rgba(230,111,0,0.5)', // 199, 212, 116
+          '.plant': 'rgba(199,212,116,0.5)', // 199, 212, 116
+          '.intro': 'rgba(92,148,187,0.2)' // 199, 212, 116
       },
-      back: `rgba(46,74,93,0.03)`, // 92, 148, 187
-      view: `rgba(46,74,93,0.10)`, // 92, 148, 187
-      drag: `rgba(0,0,0,0.13)`,
+      back: 'rgba(46,74,93,0.03)', // 92, 148, 187
+      view: 'rgba(46,74,93,0.10)', // 92, 148, 187
+      drag: 'rgba(0,0,0,0.13)',
       interval: null
   });
 
   const tobi = new Tobi({docClose: false});
+
+  if(window.location.hash !== '') {
+    const el = document.querySelector(window.location.hash);
+    if (el && el.classList) {
+      el.parentElement.parentElement.classList.add("selected");
+    }
+  }
 });
+
+
+// Go to stuff
+
+/* These are the modifications: */
+history.pushState = ( f => function pushState(){
+    var ret = f.apply(this, arguments);
+    window.dispatchEvent(new Event('pushstate'));
+    window.dispatchEvent(new Event('locationchange'));
+    return ret;
+})(history.pushState);
+
+history.replaceState = ( f => function replaceState(){
+    var ret = f.apply(this, arguments);
+    window.dispatchEvent(new Event('replacestate'));
+    window.dispatchEvent(new Event('locationchange'));
+    return ret;
+})(history.replaceState);
+
+window.addEventListener('popstate',()=>{
+    window.dispatchEvent(new Event('locationchange'))
+});
+
+window.addEventListener('locationchange', function(){
+
+    var pastSelected = document.getElementsByClassName('selected');
+    [].forEach.call(pastSelected, function(el) {
+      el.classList.remove("selected");
+    });
+
+    const el = document.querySelector(window.location.hash);
+    if (el && el.classList) {
+      el.parentElement.parentElement.classList.add("selected");
+    }
+})
